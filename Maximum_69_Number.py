@@ -14,4 +14,4 @@ elif t==6:
     t=9
 else:
     l=9
-print((((f*10+s)*10+t)*10+l))
+print(f,s,t,l,sep="")
