@@ -13,5 +13,5 @@ for x in range(l,u+1):
             t=1
             break
     if t==0:
-        print(l,end=" ")
-    l+=1
+        print(x,end=" ")
+    x+=1
