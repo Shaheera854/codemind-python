@@ -1,13 +1,9 @@
 n=int(input())
-while n!=0:
-    if n//10==0:
-        print(n)
-        break
-    else:
-        s=0
-        while n:
-            r=n%10
-            n//=10
-            s+=r
-        n=s
-            
+sum=0
+while n:
+    sum+=n%10
+    n//=10
+    if n==0 and sum>9:
+        n=sum
+        sum=0
+print(sum)
