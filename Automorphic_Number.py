@@ -1,14 +1,13 @@
-n=int(input())#76
-sqn=pow(n,2)#5776
-i=10
-r=0
-t=0
-while r!=sqn:
-    r=sqn%i
-    if n==r:
-        print('Automorphic Number')
-        t=1
+n=int(input())
+sq=n*n
+temp=0
+i=1
+while sq:
+    if temp==n:
+        print("Automorphic Number")
         break
+    temp=(sq%10)*i+temp
+    sq//=10
     i*=10
-if t==0:
-    print('Not an Automorphic Number')
+else:
+    print("Not an Automorphic Number")
