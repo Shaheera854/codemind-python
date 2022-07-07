@@ -7,6 +7,6 @@ while n:
     s+=r
     p*=r
 if s==p:
-    print('Spy Number')
+    print("Spy Number")
 else:
-    print('Not Spy Number')
+    print("Not Spy Number")
