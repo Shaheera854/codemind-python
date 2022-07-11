@@ -1,12 +1,11 @@
-def reverse(n):
-    temp=n
-    rev=0
-    while temp:
-        rev=rev*10+temp%10
-        temp//=10
-    return rev
-n=int(input())
-a=list(map(int,input().split()))
+def palin(i):
+    m=0
+    while i:
+        m=m*10+i%10
+        i=i//10
+    return m
+x = int(input())
+l = list(map(int,input().split()))
 c=0
-for i in range(n):
-    print(reverse(a[i]),end=' ')
+for i in l:
+    print(palin(i),end=' ')
