@@ -1,10 +1,7 @@
 n=int(input())
-t=0
-for i in range(1,n//2):
+for i in range(1,n):
     if i*(i+1)==n:
-        print('YES')
-        t=1
+        print("YES")
         break
-if t==0:
-    print('NO')
-        
+else:
+    print("NO")
