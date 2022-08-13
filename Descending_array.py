@@ -1,8 +1,7 @@
 n=int(input())
 a=list(map(int,input().split()))
-for i in range(n-1):
-    if a[i]<=a[i+1]:
-        print("no")
-        break
-else:
+b=sorted(a)[::-1]
+if a==b:
     print("yes")
+else:
+    print("no")
