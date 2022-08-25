@@ -7,10 +7,10 @@ def is_prime(n):
     return True
 n=int(input())
 a=list(map(int,input().split()))
-c=0
 s=0
-for i in range(n):
-    if is_prime(a[i]):
-        s+=a[i]
+c=0
+for i in a:
+    if is_prime(i):
+        s+=i
         c+=1
 print("{:.2f}".format(s/c))
