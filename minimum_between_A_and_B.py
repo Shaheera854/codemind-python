@@ -1,13 +1,16 @@
 n=int(input())
-arr=list(map(int,input().split()))
+l=list(map(int,input().split()))
 a,b=map(int,input().split())
-mini=100
-for i in range(a,b+1):
-    for j in range(n):
-        if arr[j]==i:
-            if mini>0:
-                mini=min(mini,arr[j])
-if mini!=100:
-    print(mini)
+l1=[]
+if a<b:
+    for i in range(a,b+1):
+        if i in l:
+            l1.append(i)
 else:
+    for i in range(b,a+1):
+        if i in l:
+            l1.append(i)
+if len(l1)==0:
     print("-1")
+else:
+    print(min(l1))
