@@ -1,5 +1,7 @@
 n=int(input())
 a=list(map(int,input().split()))
-for i in range(0,n,2):
-    for j in range(0,a[i+1]):
-        print(a[i],end=' ')
+a1=[]
+for i in range(0,n-1,2):
+    for j in range(a[i+1]):
+        a1.append(a[i])
+print(*a1)
