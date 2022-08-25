@@ -1,13 +1,10 @@
-n,m=map(int,input().split())
-a=list(map(int,input().split()))
-b=list(map(int,input().split()))
-a=set(a)
-b=set(b)
+m,n=map(int,input().split())
+a1=list(map(int,input().split()))
+a2=list(map(int,input().split()))
+a1=set(a1)
+a2=set(a2)
 c=0
-for i in a:
-    if i in b:
+for i in a1:
+    if i in a2:
         c+=1
-for i in b:
-    if i in a:
-        c+=1
-print(c//2)
+print(c)
