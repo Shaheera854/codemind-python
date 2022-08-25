@@ -5,19 +5,17 @@ def is_prime(n):
         if n%i==0:
             return False
     return True
-c=0
 n=int(input())
 a=list(map(int,input().split()))
-mini=min(a)
-ind_min=a.index(mini)
-maxi=max(a)
-ind_max=a.index(maxi)
-if ind_min>ind_max:
-    for i in range(ind_max,ind_min+1):
+c=0
+min_ind=a.index(min(a))
+max_ind=a.index(max(a))
+if min_ind<max_ind:
+    for i in range(min_ind,max_ind+1):
         if is_prime(a[i]):
             c+=1
 else:
-    for i in range(ind_min,ind_max+1):
+    for i in range(max_ind,min_ind+1):
         if is_prime(a[i]):
             c+=1
 print(c)
