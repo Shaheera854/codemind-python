@@ -5,10 +5,10 @@ def is_prime(n):
         if n%i==0:
             return False
     return True
-c=0
 n=int(input())
 a=list(map(int,input().split()))
-for i in range(n):
-    if is_prime(a[i]):
+c=0
+for i in a:
+    if is_prime(i):
         c+=1
 print(c)
