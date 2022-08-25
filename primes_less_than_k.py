@@ -9,7 +9,7 @@ n=int(input())
 a=list(map(int,input().split()))
 k=int(input())
 c=0
-for i in range(n):
-    if is_prime(a[i]) and a[i]<=k:
+for i in a:
+    if is_prime(i) and i<=k:
         c+=1
 print(c)
