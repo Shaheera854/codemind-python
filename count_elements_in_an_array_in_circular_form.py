@@ -1,13 +1,11 @@
 n=int(input())
-arr=list(map(int,input().split()))
-count=0
-for i in range(n-1):
-    if i==0:
-        if (arr[i+1]%2 and arr[n-1]%2==0) or (arr[i+1]%2==0 and arr[n-1]%2):
-            count+=1
-    if i!=0:
-        if (arr[i-1]%2 and arr[i+1]%2==0) or (arr[i-1]%2==0 and arr[i+1]%2):
-            count+=1
-if (arr[0]%2 and arr[n-2]%2==0) or (arr[0]%2==0 and arr[n-2]%2):
-    count+=1
-print(count)
+a=list(map(int,input().split()))
+c=0
+for i in range(n-2):
+    if (a[i]%2==0 and a[i+2]%2!=0) or (a[i]%2!=0 and a[i+2]%2==0):
+        c+=1
+if (a[n-1]%2==0 and a[1]%2!=0) or (a[n-1]%2!=0 and a[1]%2==0):
+        c+=1
+if (a[n-2]%2==0 and a[0]%2!=0) or (a[n-2]%2!=0 and a[0]%2==0):
+        c+=1
+print(c)
