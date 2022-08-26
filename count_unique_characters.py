@@ -1,11 +1,11 @@
 s=input()
-s1=0
-s=s.replace(' ','')
-for i in s:
+s=s.lower()
+l=0
+for i in range(len(s)):
     c=0
-    for j in s:
-        if i==j or ord(i)+32==ord(j) or ord(i)-32==ord(j) and i!=' ' and j!=' ':
+    for j in range(len(s)):
+        if s[i]==s[j] and s[i]!=' ':
             c+=1
     if c==1:
-        s1+=1
-print(s1)
+        l+=1
+print(l)
