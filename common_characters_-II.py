@@ -1,14 +1,7 @@
-s1=input()
-s2=input()
-s1=s1.replace(' ','')
-s2=s2.replace(' ','')
-s1=str.lower(s1)
-s2=str.lower(s2)
-s=[]
+s1=input().lower()
+s2=input().lower()
+s=''
 for i in s1:
-    if i in s2 and i not in s:
-        s.append(i)
-for i in s2:
-    if i in s1 and i not in s:
-        s.append(i)
+    if i in s2 and i!=' ' and i not in s:
+        s+=i
 print(len(s))
