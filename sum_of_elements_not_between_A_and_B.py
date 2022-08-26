@@ -1,11 +1,14 @@
 n=int(input())
-arr=list(map(int,input().split()))
+l=list(map(int,input().split()))
 a,b=map(int,input().split())
-s=0
-for i in range(n):
-    s+=arr[i]
-for j in range(a,b+1):
-    for i in range(n):
-        if arr[i]==j:
-            s-=arr[i]
-print(s)
+l1=[]
+for i in range(a,b+1):
+    l1.append(i)
+l2=[]
+for i in range(0,n):
+    if l[i] not in l1:
+        l2.append(l[i])
+if len(l2)==0:
+    print("0")
+else:
+    print(sum(l2))
