@@ -1,8 +1,10 @@
 n=int(input())
 a=list(map(int,input().split()))
+i=0
 s=0
-for i in range(n):
-    if a[i]%2!=0:
-        break
-    s+=a[i]
+while i<n:
+   if a[i]%2!=0:
+       break
+   s+=a[i]
+   i+=1
 print(s)
