@@ -1,6 +1,6 @@
-s=input()
+n=input()
 c=0
-for i in s:
-    if str.islower(i):
+for i in n:
+    if i.islower():
         c+=1
 print(c)
