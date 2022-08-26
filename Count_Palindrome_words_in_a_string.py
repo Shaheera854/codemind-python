@@ -1,13 +1,9 @@
-def pal(s):
-    if s[::-1]==s:
-        return True
-    else:
-        return False
-s=input()
-s=str.lower(s)
-s=s.split()
+st=input()
+st=st.lower()
+st=st.split()
 c=0
-for i in s:
-    if pal(i):
+for i in st:
+    rev=i[-1::-1]
+    if rev==i:
         c+=1
 print(c)
