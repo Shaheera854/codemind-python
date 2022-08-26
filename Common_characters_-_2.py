@@ -1,13 +1,14 @@
-s=input()
-s=str.lower(s)
-s=s.split()
-a=[]
-s1=s[0]
-for i in s1:
+n=input().lower().split()
+l=[]
+for j in range(len(n[0])):
     c=0
-    for j in s:
-        if i in j:
+    i=0
+    while i<len(n):
+        if n[0][j] in n[i]:
             c+=1
-    if c==len(s):
-        a.append(i)
-print(len(a))
+        else:
+            break
+        i+=1
+    if c==len(n):
+        l.append(n[0][j])
+print(len(l))
