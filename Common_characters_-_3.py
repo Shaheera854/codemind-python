@@ -1,19 +1,17 @@
-s=input()
-s=str.lower(s)
-s=s.split()
-a=[]
-s1=s[0]
-for i in s1:
+n=input().lower().split()
+l=[]
+for j in range(len(n[0])):
     c=0
-    for j in s:
-        if i in j:
+    i=0
+    while i<len(n):
+        if n[0][j] in n[i]:
             c+=1
-    if c==len(s) and i not in a:
-        a.append(i)
-if len(a)==0:
-    print('-1')
+        else:
+            break
+        i+=1
+    if c==len(n):
+        l.append(n[0][j])
+if len(l)==0:
+    print("-1")
 else:
-    m=a[0]
-    for i in range(1,len(a)):
-        m=min(m,a[i])
-    print(m)
+    print(min(l))
