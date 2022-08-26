@@ -1,7 +1,7 @@
-def pal(s):
-    if s[::-1]==s:
-        return True
-    return False
-s=input()
-s=str.lower(s)
-print(pal(s))
+n=input()
+n=n.lower()
+rev=n[-1::-1]
+if rev==n:
+    print(True)
+else:
+    print(False)
