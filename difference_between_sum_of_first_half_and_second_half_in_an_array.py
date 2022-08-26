@@ -6,4 +6,4 @@ for i in range(n//2):
     s1+=a[i]
 for i in range(n//2,n):
     s2+=a[i]
-print(abs(s2-s1))
+print(abs(s1-s2))
