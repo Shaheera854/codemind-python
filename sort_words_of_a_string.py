@@ -1,8 +1,10 @@
-s=input().split()
-for k in s:
-    a=list(k)
-    for i in range(len(a)):
-        for j in range(i+1,len(a)):
-            if a[i]>a[j] and a[i] not in '!@#$%^&*(){}[]''"":;/?.>,<\|+=-_' and a[j] not in '!@#$%^&*(){}[]''"":;/?.>,<\|+=-_':
-                a[i],a[j]=a[j],a[i]
-    print(*a,sep='',end=' ')
+n=list(map(str,input().split()))
+for i in n:
+    l=list(i)
+    for x in range(len(l)):
+        for y in range(len(l)):
+            if x!=y and l[x].isalnum() and l[y].isalnum() and l[x]<l[y]:
+                temp=l[x]
+                l[x]=l[y]
+                l[y]=temp
+    print(*l,sep='',end=' ')
