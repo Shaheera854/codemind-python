@@ -1,13 +1,9 @@
-s1=input()
-s2=input()
-s1=str.lower(s1)
-s2=str.lower(s2)
-if len(s1)==len(s2):
-    for i in s1:
-        if i not in s2:
-            print(False)
-            break
-    else:
-        print(True)
+s1=input().lower()
+s2=input().lower()
+s1,s2=set(s1),set(s2)
+s1,s2=list(s1),list(s2)
+s1.sort(),s2.sort()
+if s1==s2:
+    print(True)
 else:
     print(False)
