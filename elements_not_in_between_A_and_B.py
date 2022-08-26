@@ -1,13 +1,13 @@
 n=int(input())
-arr=list(map(int,input().split()))
+l=list(map(int,input().split()))
 a,b=map(int,input().split())
-c=0
-for j in range(a,b+1):
-    for i in arr:
-        if j==i:
-            arr.remove(i)
-if len(arr)>0:
-    for i in arr:
-        print(i,end=' ')
-else:
+l1=[]
+for i in range(a,b+1):
+    l1.append(i)
+t=0
+for i in range(n):
+    if l[i] not in l1:
+        print(l[i],end=' ')
+        t=1
+if t==0:
     print("-1")
