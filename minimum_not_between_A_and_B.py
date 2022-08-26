@@ -1,16 +1,14 @@
 n=int(input())
-arr=list(map(int,input().split()))
+l=list(map(int,input().split()))
 a,b=map(int,input().split())
-s=0
-mini=100
-l=[]
+l1=[]
 for i in range(a,b+1):
-    l.append(i)
-for i in arr:
-    if i not in l:
-        mini=min(mini,i)
-        s=1
-if s!=1:
+    l1.append(i)
+l2=[]
+for i in range(0,n):
+    if l[i] not in l1:
+        l2.append(l[i])
+if len(l2)==0:
     print("-1")
 else:
-    print(mini)
+    print(min(l2))
