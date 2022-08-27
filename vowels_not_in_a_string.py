@@ -1,10 +1,10 @@
-s=input()
-vowels=['a','e','i','o','u']
-l=[]
+s=input().lower()
+a=[]
+vowels='aeiou'
 for i in vowels:
     if i not in s:
-        l.append(i)
-if len(l)==0:
-    print('0')
+        a.append(i)
+if len(a)==0:
+    print("0")
 else:
-    print(*l)
+    print(*sorted(a))
