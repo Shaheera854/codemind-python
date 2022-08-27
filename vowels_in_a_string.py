@@ -1,7 +1,7 @@
-s=input()
-ve=input()
-if ve in s:
+n=input()
+ele=input()
+if ele in n:
     print(True)
-    print(s.index(ve))
+    print(n.index(ele))
 else:
     print(False)
