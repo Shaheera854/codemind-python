@@ -1,7 +1,6 @@
-s=input()
-s=str.lower(s)
-letters='abcdefghijklmnopqrstuvwxyz'
-for i in letters:
+s=input().lower()
+a='abcdefghijklmnopqrstuvwxyz'
+for i in a:
     if i not in s:
         print(False)
         break
