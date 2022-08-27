@@ -1,10 +1,9 @@
-def count(i):
-    v=['a','e','i','o','u','A','E','I','O','U']
+s=input().lower().split()
+vowels='aeiouAEIOU'
+maxi=0
+for i in s:
     c=0
     for j in range(len(i)):
-        if i[j] in v:
+        if i[j] in vowels:
             c+=1
-    return c
-s=input().split()
-for i in s:
-    print(count(i),end=' ')
+    print(c,end=' ')
