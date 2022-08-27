@@ -1,17 +1,17 @@
-vowels1=['a','e','i','o','u']
-vowels2=['A','E','I','O','U']
-t1=0
 s=input()
-for i in range(5):
-    if vowels1[i] not in s:
-        t1=1
+vowels1='aeiou'
+vowels2='AEIOU'
+c=0
+for i in vowels1:
+    if i not in s:
+        c=1
         break
 else:
     print(True)
-    exit()
-for i in range(5):
-    if vowels2[i] not in s:
-        print(False)
-        break
-else:
-    print(True)
+if c==1:
+    for i in vowels2:
+        if i not in s:
+            print(False)
+            break
+    else:
+        print(True)
