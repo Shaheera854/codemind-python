@@ -1,6 +1,5 @@
-s=input()
-s=s.split()
-m=len(s[0])
-for i in range(1,len(s)):
-    m=max(m,len(s[i]))
-print(m)
+n=input().split()
+l=[]
+for i in n:
+    l.append(len(i))
+print(max(l))
