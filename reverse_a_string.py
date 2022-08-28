@@ -1,3 +1,3 @@
-s=input()
-for i in range(len(s)-1,-1,-1):
-    print(s[i],end='')
+n=input()
+for i in range(len(n)-1,-1,-1):
+    print(n[i],end='')
