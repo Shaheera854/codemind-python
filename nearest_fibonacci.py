@@ -1,18 +1,14 @@
-def fibi(n):
-    a,b=0,1
-    i=3
-    while True:
-        c=a+b
-        a,b=b,c
-        if b>n and (b-n)>(n-a):
-            print(a)
-            break
-        elif b>n and (b-n)<(n-a):
-            print(b)
-            break
-        elif b>n:
-            print(a,b)
-            break
-        i+=1
 n=int(input())
-fibi(n)
+first_number=0
+second_number=1
+next_number=0
+while next_number<=n:
+    next_number=first_number+second_number
+    first_number=second_number
+    second_number=next_number
+if n-first_number<next_number-n:
+   print(first_number)
+elif n-first_number==next_number-n:
+    print(first_number,next_number)
+else:
+    print(next_number)
